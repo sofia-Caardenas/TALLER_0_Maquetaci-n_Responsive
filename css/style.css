@@ -28,6 +28,7 @@ h3,
 h4,
 h5 {
     font-family: 'Marcellus', serif;
+    text-align: center;
 }
 
 nav {
@@ -67,7 +68,7 @@ navbar-button {
 }
 
 #features {
-    background: url(../img/bg-features.png);
+    background-image: url(../img/bg-features.png);
     color: white;
     padding-top: 1rem;
 }
@@ -109,4 +110,47 @@ features-description {
 
 .feature-black {
     background-color: rgba(0, 0, 0, 0.59);
+}
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider input[type="radio"]:checked + .slide-container .slider {
+    transform: translateX(-100%);
+}
+.descripcion {
+    display: flex;
+    align-items: center;
+}
+
+.descripcion img {
+    margin-right: 4px; 
+    width: 200px;
+    height: auto; 
+}
+
+.descripcion h5 {
+    font-size: 16px; 
+    line-height: 1.5; 
 }
